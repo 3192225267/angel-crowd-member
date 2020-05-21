@@ -1,0 +1,23 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: angel-crowd-project
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 192.168.11.129
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+aliyun:
+  oss:
+    access-key-secret: wpnFwigPmFao8l9bf59itSlgF8PI6N
+    access-key-id: LTAI4GJU65kFXig4tcnuKCk4
+    bucket-domain: https://angel190830.oss-cn-beijing.aliyuncs.com
+    bucket-name: angel190830
+    end-point: https://oss-cn-beijing.aliyuncs.com

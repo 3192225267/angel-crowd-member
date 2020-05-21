@@ -1,0 +1,35 @@
+
+//    @RequestMapping("/auth/member/send/short/message.json")
+//    public ResultEntity<String> sendMessage(@RequestParam("phoneNum") String phoneNum){
+//      ResultEntity<String> sendMennageResultEntity= CrowdUtil.sendCodeByShortMessage(
+//                shortMessageProperites.getHost(),
+//                shortMessageProperites.getPath(),
+//                shortMessageProperites.getMethod(),phoneNum,
+//                shortMessageProperites.getAppcode(),
+//                shortMessageProperites.getSign(),
+//                shortMessageProperites.getSkin()
+//        );
+//
+//      // 2.判断短信发送结果
+//        if(ResultEntity.SUCCESS.equals(sendMennageResultEntity.getResult())){
+//            // 3. 如果发送成功，则将验证码存入Redis
+//            // 从上一部操作的结果中获取随机生成的验证码
+//            // 如果发送成功，则将验证码存入Redis
+//            String code=sendMennageResultEntity.getData();
+//
+//            // 拼接一个用于在Redis中存储数据的Key
+//            String key=CrowdConstant.REDIS_CODE_PREFIX+phoneNum;
+//
+//            // 调用远程接口存入Reids
+//           ResultEntity<String> saveCodeResultEntity= redisRemoteService.setRedisKeyValueRemoteWithTimeout(key,code,15,TimeUnit.MINUTES);
+//
+//           // 判断结果
+//            if(ResultEntity.SUCCESS.equals(saveCodeResultEntity)){
+//                return ResultEntity.successWithoutData();
+//            }else{
+//                return sendMennageResultEntity;
+//            }
+//        }else{
+//            return sendMennageResultEntity;
+//        }
+//    }

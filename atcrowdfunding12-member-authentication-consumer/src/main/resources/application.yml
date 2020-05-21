@@ -1,0 +1,27 @@
+server:
+  port: 4000
+spring:
+  application:
+    name: angel-crowd-auth
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 192.168.11.129
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+short:
+  message:
+    host: http://dingxin.market.alicloudapi.com/dx/sendSms
+    method: POST
+    path: /dx/sendSms
+    app-code: aa6db7dfb1f443fe95f6adf537d45fd2
+    sign: 151003
+    skin: 84683
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
